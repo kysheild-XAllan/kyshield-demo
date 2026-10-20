@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KyShield: VLA Data Factory | VC Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 850px;
+            width: 100%;
+            background: #111827;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border: 1px solid #1f2937;
+        }
+        h1 { color: #38bdf8; font-size: 26px; margin-top: 0; }
+        .badge {
+            display: inline-block;
+            background: #059669;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        p { color: #9ca3af; line-height: 1.6; }
+        .section-title {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-top: 30px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 8px;
+        }
+        .media-box {
+            margin: 20px 0;
+            text-align: center;
+        }
+        video, img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #374151;
+            background: #000;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .spec-card {
+            background: #1f2937;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #374151;
+        }
+        .spec-card h3 { margin: 0 0 8px 0; color: #38bdf8; font-size: 15px; }
+        .spec-card p { margin: 0; color: #e5e7eb; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>KyShield: VLA Data Factory</h1>
+        <div class="badge">Rawalpindi, Pakistan &bull; VC Demonstration</div>
+        <p>Transforming 1 human video demonstration of picking a cup into <strong>10 high-precision robot data variations</strong>. Fully compatible with LeRobot / HuggingFace and tested inside MuJoCo physics simulation.</p>
+
+        <!-- Video Section -->
+        <div class="section-title">1. Source Human Video Demonstration</div>
+        <div class="media-box">
+            <video src="cup.mp4" controls autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="section-title">2. Safety & Force Control Proof (Real Robot Ready)</div>
+        <div class="media-box">
+            <!-- This loads your graph directly from the folder -->
+            <img src="kyshield_graph.png" alt="KyShield Safety and Force Graph">
+        </div>
+
+        <!-- Detailed Metrics Grid -->
+        <div class="section-title">3. Technical Pipeline Specs</div>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>Force Threshold</h3>
+                <p>Safe clamping force bounded strictly from <strong>0.0N to 3.5N</strong> to prevent object crushing.</p>
+            </div>
+            <div class="spec-card">
+                <h3>Trajectory Density</h3>
+                <p>Precise interpolation of <strong>150 spatial points</strong> (hand X, Y, Z coordinates + gripper state).</p>
+            </div>
+            <div class="spec-card">
+                <h3>Hardware Compatibility</h3>
+                <p>Native integration ready for <strong>ALOHA, xArm, and Franka</strong> robotic hardware platforms.</p>
+            </div>
+            <div class="spec-card">
+                <h3>Output Structure</h3>
+                <p>Generates standardized JSON trajectory logs (`trajectory.json` + 10 variation files).</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
